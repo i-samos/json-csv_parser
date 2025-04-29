@@ -19,11 +19,13 @@ A web-based tool for uploading, previewing, and converting **JSON** or **CSV** f
 - **CSS3** (Responsive design, flexbox-based layout)
 - **Vanilla JavaScript (ES6+)** (no external libraries)
 
-### Open in Browser
+## Open in Browser
 
 Simply open the `index.html` file in any modern browser.
 
 > No build process or installation required.
+
+**Preview here:** [https://i-samos.github.io/json-csv_parser/index.html](https://i-samos.github.io/json-csv_parser/index.html)
 
 ## Usage
 
