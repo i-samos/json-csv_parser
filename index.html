@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON / CSV to CSV Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="panel filelist-panel">
+        <h2>Uploaded JSON Files</h2>
+        <ul id="fileNameList"></ul>
+      </div>
+
+      <div class="panel">
+        <h1>JSON / CSV to CSV Converter</h1>
+
+        <label for="jsonFile">Upload JSON File(s):</label>
+        <input type="file" id="jsonFile" accept="application/json" multiple />
+
+        <label for="csvFile">Upload CSV File:</label>
+        <input type="file" id="csvFile" accept=".csv" />
+
+        <p id="fileNameDisplay" class="filename-display"></p>
+
+        <div class="dropdown-row">
+          <label for="typeSelect">Type:</label>
+          <select id="typeSelect"></select>
+        </div>
+
+        <div class="dropdown-row">
+          <label for="valueSelect">Value:</label>
+          <select id="valueSelect"></select>
+        </div>
+
+        <div class="dropdown-row hidden" id="valueFilterFieldRow">
+          <label for="valueFilterField">Filter By:</label>
+          <select id="valueFilterField"></select>
+        </div>
+
+        <div class="dropdown-row hidden" id="valueFilterValueRow">
+          <label for="valueFilterValue">Where Equals:</label>
+          <select id="valueFilterValue"></select>
+        </div>
+
+        <div class="dropdown-row">
+          <label for="startSelect">Start:</label>
+          <div class="combo-field">
+            <select id="startSelect"></select>
+            <label class="checkbox-label">
+              <input type="checkbox" id="startCombine" />
+              + Time
+            </label>
+            <select id="startSelect2" class="hidden"></select>
+          </div>
+        </div>
+
+        <div class="dropdown-row">
+          <label for="endSelect">End:</label>
+          <div class="combo-field">
+            <select id="endSelect"></select>
+            <label class="checkbox-label">
+              <input type="checkbox" id="endCombine" />
+              + Time
+            </label>
+            <select id="endSelect2" class="hidden"></select>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button id="generateCsv" disabled>Generate CSV</button>
+          <button id="downloadCsvBtn" class="hidden">Download CSV</button>
+        </div>
+      </div>
+
+      <div class="panel preview-panel">
+        <h2>JSON Preview (First 3 Items)</h2>
+        <pre id="jsonPreview"></pre>
+
+        <div id="previewContainer">
+          <h2>CSV Preview (First 3 Rows)</h2>
+          <table id="csvPreviewTable" border="1">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
