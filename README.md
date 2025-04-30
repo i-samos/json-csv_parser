@@ -1,13 +1,14 @@
 
 # JSON/CSV to CSV Converter
 
-A web-based tool for uploading, previewing, and converting **JSON** or **CSV** files into a standardized **CSV** format with customized field selections and optional filtering.
+A lightweight tool for converting structured **JSON/CSV** data into a clean **CSV** format, with support for flattening, filtering, and parsing date/time fields into epoch timestamps.
 
 ## Features
 
 - Upload multiple JSON files or a single CSV file
 - Flatten nested JSON objects automatically
 - Choose fields for **type**, **value**, **start**, and **end** entries
+- **Start and End fields are parsed and converted into epoch timestamps**
 - Combine date and time fields into a single epoch timestamp
 - Filter JSON arrays by nested fields
 - Preview both JSON data and the generated CSV (first 3 records)
@@ -34,12 +35,13 @@ Simply open the `index.html` file in any modern browser.
 3. Select the required fields:
    - `Type`
    - `Value`
-   - `Start`
-   - `End`
-4. (Optional) Apply additional filters to nested array fields.
-5. Click **Generate CSV**.
-6. Review the CSV preview (first 3 rows).
-7. Click **Download CSV**.
+   - `Start` — **Date/Time field parsed into epoch time**
+   - `End` — **Date/Time field parsed into epoch time**
+4. (Optional) Combine a second time field with Start/End.
+5. (Optional) Apply additional filters to nested array fields.
+6. Click **Generate CSV**.
+7. Review the CSV preview (first 3 rows).
+8. Click **Download CSV**.
 
 ## Project Structure
 
